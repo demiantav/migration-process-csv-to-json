@@ -1,0 +1,4 @@
+node_modules/
+flota-celulares.xlsx
+package-lock.json
+.env

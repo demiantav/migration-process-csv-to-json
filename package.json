@@ -1,0 +1,19 @@
+{
+  "name": "migration-process-csv-to-json",
+  "version": "1.0.0",
+  "description": "Codigo para migrar de un excel datos a json y luego tambien poder subirlo a una base de datos en MongoDB",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Demian Tavolaro",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.8.2",
+    "nodemon": "^3.1.7",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  }
+}
