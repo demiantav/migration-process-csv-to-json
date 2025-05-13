@@ -3,7 +3,7 @@ import XLSX from 'xlsx';
 import fs from 'fs';
 
 // Leer el archivo como buffer
-const fileBuffer = fs.readFileSync('flota-celulares.xlsx');
+const fileBuffer = fs.readFileSync('data.xlsx');
 
 // Convertir a binary string
 const binaryStr = fileBuffer.toString('binary');
@@ -11,14 +11,14 @@ const binaryStr = fileBuffer.toString('binary');
 const workbook = XLSX.read(binaryStr, { type: 'binary' });
 
 let first_sheet = workbook.Sheets['Flota'];
-const test = XLSX.utils.sheet_to_json(first_sheet);
+const test = XLSX.utils.sheet_to_json(first_sheet, { raw: false });
 
 const teststring = JSON.stringify(test);
 
 console.log(test);
-console.log(test.length)
+console.log(test.length);
 console.log(teststring);
 
-// fs.writeFile('db.json', teststring, (err, result) => {
-//   if (err) console.log(err);
-// });
+fs.writeFile('db.json', teststring, (err, result) => {
+  if (err) console.log(err);
+});

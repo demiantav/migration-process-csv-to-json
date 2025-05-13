@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import User from "../models/user";
-import Device from "../models/device";
+import User from "../models/user.js";
+import Device from "../models/device.js";
 
 const URI = 'mongodb+srv://demiantavolaro6:Venancio92@cluster0.jx8xzrh.mongodb.net/inventarioDB?retryWrites=true&w=majority&appName=Cluster0';
 
